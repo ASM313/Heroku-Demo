@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breast Cancer Prediction</title>
+    <style>
+        .myDiv {
+             border: 5px outset red ;
+             background-color: lightblue;
+             text-align: center;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Breast Cancer Predictor</h1>
+    <h2>Fill this details</h2>
+    <div class="myDiv">
+    <form action="/predict" method="post">
+        <br><br>
+        <label>Clump Thickness</label>
+        <input type="number" name="clump_thickness" ><br><br>
+
+        <label>Cell Size</label>
+        <input type="number" name="cell_size" ><br><br>
+
+        <label>Cell Shape</label>
+        <input type="number" name="cell_shape" ><br><br>
+
+        <label>Marginal Adhesion</label>
+        <input type="number" name="marginal_adhesion" ><br><br>
+
+        <label>Single Epithelial Cell Size</label>
+        <input type="number" name="single_epithelial_cell_size" ><br><br>
+
+        <label>Bare Nuclei</label>
+        <input type="number" name="bare_nuclei" ><br><br>
+
+        <label>Normal Nucleoli</label>
+        <input type="number" name="normal_nucleoli" ><br><br>
+
+        <label>Bland Chromatin</label>
+        <input type="number" name="bland_chromatin" ><br><br>
+
+        <label>Mitoses</label>
+        <input type="number" name="mitoses" ><br><br>
+
+        <input type="submit" value="Predict ">
+
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+        </form>
+    </div>
+    
+</body>
+</html>

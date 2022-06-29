@@ -1,0 +1,10 @@
+flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+numpy
+sklearn
+matplotlib
+pandas
